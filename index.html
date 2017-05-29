@@ -1,0 +1,126 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>My Name Is Jeff</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <style>
+        body {
+            background-image: url(https://s-media-cache-ak0.pinimg.com/originals/fb/0a/52/fb0a5296bc4c816a059bebc6970e34b2.gif);
+            background-position: center center;
+            background-size: cover;
+            color: yellow;
+        }
+        
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        .animation {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            padding: 5px;
+        }
+        
+        .animation img {
+            max-width: 100%;
+            max-height: 100%;
+            width: 100%;
+        }
+
+    </style>
+    <script type="text/javascript" src="https://cdn.rawgit.com/stevenschobert/instafeed.js/e8c3a766/instafeed.js"></script>
+
+
+</head>
+
+<body>
+    <center><img src="https://i.makeagif.com/media/1-08-2016/6p3VGT.gif">
+        <h1>BrenIs<span id="quote"> On MINECRAFT</span></h1>
+        <nav>߷ <a href="https://twitter.com/brenisdank">Twitter</a> ߷ <a href="https://instagram.com/brenisdank">Instagram</a> ߷</nav>
+    </center>
+    <center>
+        <p>I Make / Run dank maymay accounts.</p>
+
+        <img src="https://m.popkey.co/1edcf5/JmDbE.gif">
+        <br>
+        <div id="instagram"></div>
+    </center>
+
+    <script>
+        window.setInterval(function() {
+            /// call your function here
+
+            (function() {
+                var quotes = [{
+                    text: "Jeff"
+                }, {
+                    text: "Dank"
+                }, {
+                    text: " a Fag"
+                }, {
+                    text: "Edgy"
+                }, {
+                    text: "FuckedUp"
+                }];
+                var quote = quotes[Math.floor(Math.random() * quotes.length)];
+                document.getElementById("quote").innerHTML =
+                    '' + quote.text + '';
+            })();
+        }, 1000);
+
+    </script>
+
+
+    <script type="text/javascript">
+        //var feed = new Instafeed({
+        //  get: 'popular',
+        //tagName: 'awesome',
+        //clientId: 'ed0c8123f6444ad8a567136d15bc0444',
+        //template: '<a class="animation" href="{{link}}"><img src="{{image}}" /></a>'
+        //});
+        //feed.run();
+
+    </script>
+
+    <script type="text/javascript">
+        var feed = new Instafeed({
+            get: 'user',
+            userId: 3984921869,
+            accessToken: '3984921869.1677ed0.485d6a5ff4ed4f22821d6590e1a55371',
+            target: 'instagram',
+            resolution: 'standard_resolution',
+            template: '<a class="animation" href="maymay.html?p={{link}}"><img src="{{image}}" /></a>',
+            after: function() {
+                var el = document.getElementById('instagram');
+                if (el.classList)
+                    el.classList.add('show');
+                else
+                    el.className += ' ' + 'show';
+            }
+        });
+        window.onload = function() {
+            feed.run();
+        }
+
+    </script>
+</body>
+
+</html>
